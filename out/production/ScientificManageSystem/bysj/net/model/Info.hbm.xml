@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="bysj.net.model.Info" table="t_Info">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="user" class="bysj.net.model.User" outer-join="false" lazy="false">
+		</many-to-one>
+		<property name="s_0" column="i_name" />
+		<property name="s_1" column="i_time" />
+		<property name="s_2" column="i_content" />
+		<property name="s_3" column="i_bz" />
+	</class>
+</hibernate-mapping>

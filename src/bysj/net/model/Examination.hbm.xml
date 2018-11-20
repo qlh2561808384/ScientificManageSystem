@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="bysj.net.model.Examination" table="t_Examination">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="fruit" class="bysj.net.model.Fruit" outer-join="false" lazy="false">
+		</many-to-one>
+		<property name="s_0" column="e_name" />
+		<property name="s_1" column="e_time" />
+		<property name="s_2" column="e_status" />
+		<property name="s_3" column="e_content" />
+		<property name="s_4" column="e_bz" />
+	</class>
+</hibernate-mapping>
